@@ -1,0 +1,33 @@
+extends base
+
+block content
+  
+  main.profile 
+    
+    form(class="profile__form", action="#")
+      p.profile__title تنظیمات حساب کاربری
+      
+      label(for="profile__form-name", class="profile__form-labels") نام:
+      input#profile__form-name(type="text", required, class="profile__form-input", value=`${user.name}`)
+      label(for="profile__form-family", class="profile__form-labels") نام خانوادگی:
+      input#profile__form-family(type="text", required, class="profile__form-input", value=`${user.family}`)
+      label(for="profile__form-email", class="profile__form-labels") ایمیل:
+      input#profile__form-email(type="email", required, class="profile__form-input", value=`${user.email}`)
+      button.btn-editprofile.btn-profile-changesetting ذخیره تنظیمات
+
+    form(class="profile__form", action="#")
+      p.profile__title تغییر پسورد
+      
+      label(for="profile__form-passwordCurrent", class="profile__form-labels") پسورد فعلی:
+      input#profile__form-passwordCurrent(type="password", required, class="profile__form-input")
+      label(for="profile__form-password", class="profile__form-labels") پسورد جدید:
+      input#profile__form-password(type="password", required, class="profile__form-input")
+      label(for="profile__form-confirmPassword", class="profile__form-labels") تکرار پسورد جدید:
+      input#profile__form-confirmPassword(type="password", placeholder="", required, class="profile__form-input")
+      button.btn-editprofile.btn-profile-updatepassword تغییر پسورد
+    
+    
+    p.profile-logout-text خروج از حساب کاربری
+    a(href="#" class="profile-modal__logout profile-logout-btn")
+      p خروج 
+      
