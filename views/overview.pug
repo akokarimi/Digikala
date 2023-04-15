@@ -21,26 +21,11 @@ block content
        each brand in brands
         -i++;
          div(class="filters__brands-item")
-          input(type="checkbox", class="filters__brands-item-checkbox" id=`${brand}`)
+          input(type="checkbox", class=`filters__brands-item-checkbox ${brand}` id=`${brand}`)
           label(class="filters__brands-item-label", for=`${brand}`)
            p= brand
            p= brandsF[i-1]   
-    div(class="filters__item")
-      p رنگ
-      input#colors-toggle(type="checkbox", class="filter_checkbox")
-      label.toggle-icon--colors(for="colors-toggle")
-        svg.toggle-icon
-          use(xlink:href="/img/svg-icons.svg#icon-keyboard_arrow_down")
-      div(class="filters__colors")
-        -let colors = [];
-        each product in products
-         -product.color.forEach(element => {if (!colors.includes(element)){colors.push(element)}});
-        each color in colors
-         div(class="filters__colors-item")
-          input#white-color-toggle(type="checkbox", class="filters__colors-item-checkbox" value=`${color}`)
-          label(class="filters__colors-item-label", for="white-colors-toggle")
-            p= color
-            div
+    
     div(class="filters__item")
       p قیمت
       input#price-toggle(type="checkbox", class="filter_checkbox")

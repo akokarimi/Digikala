@@ -1227,6 +1227,7 @@ h3 {
 .filters__brands-item {
   display: flex;
   gap: 1rem;
+  align-items: flex-start;
 }
 .filters__brands-item-label {
   display: flex;

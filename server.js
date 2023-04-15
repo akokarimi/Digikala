@@ -10,7 +10,7 @@ process.on("uncaughtException", (err) => {
 
 dotenv.config({ path: "./config.env" });
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const DB = process.env.DATA_BASE.replace(
   "<PASSWORD>",
   process.env.ATLAS_PASSWORD

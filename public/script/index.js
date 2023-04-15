@@ -3,6 +3,19 @@ import { updateSettings, updatePassword } from "./updateProfile";
 import { registerAnOrder, removeAnOrder } from "./registerOrder";
 import { addComment } from "./comment";
 
+////////filters
+
+// const brandsCheckboxContainer = document.querySelector(".filters__brands");
+// console.log(brandsCheckboxContainer);
+// if (brandsCheckboxContainer) {
+//   brandsCheckboxContainer.addEventListener("click", (e) => {
+//     if (e.target.classList.contains("filters__brands-item-checkbox")) {
+//       const id = e.target.getAttribute("id");
+//       window.location.assign(`/?brandEnglish=${id}`);
+//     }
+//   });
+// }
+
 ////////// comment
 
 const addCommentBtn = document.querySelector(".btn-add-comment");
