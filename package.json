@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
     "watch:js": "parcel watch ./public/script/index.js --out-dir ./public/script --out-file bundle.js",
     "build:js": "parcel build ./public/script/index.js --out-dir ./public/script --out-file bundle.js"
   },
