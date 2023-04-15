@@ -15,7 +15,6 @@ const reviewRouter = require("./routes/reviewsRoutes");
 const viewRouter = require("./routes/viewsRoutes");
 const errorController = require("./controllers/errorController");
 const AppError = require("./utilities/AppError");
-const compression = require("compression");
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
