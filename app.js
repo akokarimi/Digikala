@@ -8,7 +8,6 @@ const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
 const cookieParser = require("cookie-parser");
-const comression = require("compression");
 
 const productRouter = require("./routes/productsRoutes");
 const userRouter = require("./routes/usersRoutes");
@@ -59,7 +58,6 @@ app.use(
     ],
   })
 );
-app.use(compression());
 
 app.use("/", viewRouter);
 
